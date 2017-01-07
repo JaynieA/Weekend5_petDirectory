@@ -1,6 +1,6 @@
 console.log('js');
 
-var app = angular.module('petsApp', []);
+var app = angular.module('petsApp', ['ngRoute']);
 
 app.controller('PetsController', ['$scope', '$http', function($scope, $http) {
   console.log('NG');
