@@ -14,55 +14,18 @@
   <link rel="stylesheet" href="/stylesheets/css/master.css">
 </head>
 <body ng-app="petsApp">
-
-  <h1 class="text-center">Pet Directory</h1>
-  <ul>
-    <li><a href="#!/home">Home</a></li>
-    <li><a href="#!/addPet">Add Pet</a></li>
-    <li><a href="#!/viewPets">View Pets</a></li>
-  </ul>
-  <main ng-view></main>
-  
-  <!-- <main ng-controller="PetsController" class="container">
+  <div class="container">
     <h1 class="text-center">Pet Directory</h1>
-    <h3 class="text-center">Use the form provided to add a pet to the directory.</h3>
-    <hr>
-    <div class="addPetDiv">
-      <h4>Add a Pet:</h4>
-      <form class="form-inline" ng-submit="postPet()" name="addPetForm">
-        <div class="form-group">
-          <label>Name:</label>
-          <input ng-model="nameIn" type="text" placeholder="name" class="form-control" required>
-        </div>
-        <div class="form-group">
-          <label>Species:</label>
-          <input ng-model="speciesIn" type="text" placeholder="species" class="form-control" required>
-        </div>
-        <div class="form-group">
-          <label>Age:</label>
-          <input ng-model="ageIn" type="number" placeholder="age" class="form-control" required>
-        </div>
-        <div class="form-group">
-          <label>Image URL:</label>
-          <input ng-model="urlIn" type="text" placeholder="image URL" class="form-control" required>
-        </div>
-        <button type="submit" class="btn btn-success">Add Pet</button>
-      </form>
-    </div>
-    <hr>
-    <div class="petsOutDiv">
-      <div class="col-xs-6 col-sm-3 text-center pets-col" ng-repeat="pet in allPets">
-        <div class="pet">
-          <img ng-src="{{ pet.image_url }}" alt="{{ pet.name }}" class="img-responsive thumbnail">
-          <p><strong>Name:</strong> {{ pet.name }}</p>
-          <p><strong>Age:</strong> {{ pet.age }}</p>
-          <p><strong>Species:</strong> {{ pet.animal }}</p>
-          <button ng-click="deletePet( pet._id )" type="button" class="btn btn-sm btn-danger">Delete {{ pet.name }}</button>
-        </div>
-      </div>
-    </div>
 
 
-  </main> -->
+    <ul>
+      <li><a href="#!/home">Home</a></li>
+      <li><a href="#!/addPet">Add Pet</a></li>
+      <li><a href="#!/viewPets">View Pets</a></li>
+    </ul>
+    <hr>
+    <main ng-view></main>
+  </div>
+
 </body>
 </html>
