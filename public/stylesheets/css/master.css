@@ -1,0 +1,11 @@
+html, body {
+  font-family: "Roboto", sans-serif; }
+
+.petsOutDiv .col-sm-3:nth-child(4n+1) {
+  clear: left; }
+.petsOutDiv .pets-col {
+  margin: 10px auto; }
+.petsOutDiv .pet p:not(:last-of-type) {
+  margin: 0 0 5px; }
+
+/*# sourceMappingURL=master.css.map */

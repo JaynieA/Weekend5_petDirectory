@@ -1,0 +1,21 @@
+@import 'settings';
+//GLOBALS
+html, body {
+  font-family: $mainFont;
+}
+//LAYOUT
+.petsOutDiv {
+  .col-sm-3:nth-child(4n+1) {
+    clear: left;
+  }
+  .pets-col {
+    margin: 10px auto;
+  }
+  .pet {
+    p {
+      &:not(:last-of-type){
+        margin: 0 0 5px;
+      }
+    }
+  }
+}
