@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <div ng-controller="AddPetController" class="addPetDiv">
-  <h4>Add a Pet:</h4>
-  <form class="form-inline" ng-submit="postPet()" name="addPetForm">
+  <h4 class="text-center">Add Your Pet(s):</h4>
+  <form  ng-submit="postPet()" name="addPetForm">
     <div class="form-group">
       <label>Name:</label>
       <input ng-model="nameIn" type="text" placeholder="name" class="form-control" required>
@@ -21,4 +21,3 @@
     <button type="submit" class="btn btn-success">Add Pet</button>
   </form>
 </div>
-<hr>

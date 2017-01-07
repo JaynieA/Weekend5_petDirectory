@@ -4,6 +4,11 @@ html, body {
   font-family: $mainFont;
 }
 //LAYOUT
+//Navbar
+//Home
+//Add Pet
+
+//Show Pets
 .petsOutDiv {
   .col-sm-3:nth-child(4n+1) {
     clear: left;
@@ -16,6 +21,32 @@ html, body {
       &:not(:last-of-type){
         margin: 0 0 5px;
       }
+    }
+  }
+}
+//Footer
+.footer {
+  color: $white;
+  background-color: $footerBackground;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 40px;
+  a {
+    color: $white;
+  }
+}
+.footer-list {
+  list-style: none;
+  padding-left: 0;
+  padding: 10px 0 0 0;
+  text-align: center;
+  li {
+    color: $white;
+    display: inline;
+    &:not(:first-child):before {
+      content: ' | ';
+      padding: 10px;
     }
   }
 }

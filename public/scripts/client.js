@@ -1,3 +1,4 @@
+var logs = false;
 var app = angular.module("petsApp", ["ngRoute"]);
 
 //Inject route providers
@@ -22,11 +23,10 @@ app.config(["$routeProvider", function($routeProvider) {
 
 //Controllers
 app.controller("HomeController", ["$scope", '$http', function($scope, $http) {
-  console.log('home');
+  if (logs) console.log('home');
 }]); // end HomeController
 
 app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
-  console.log('add pet');
 
   var clearForm = function() {
     //reset input values to blank
@@ -37,7 +37,7 @@ app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
   }; // end clearForm
 
   $scope.postPet = function() {
-    console.log('in postPet');
+    if (logs) console.log('in postPet');
     //assemble object to send
     var objectToSend = {
       name: $scope.nameIn,
@@ -58,14 +58,13 @@ app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
 }]); // end AddPetController
 
 app.controller("ViewPetsController", ["$scope", '$http', function($scope, $http) {
-  console.log('view pets');
 
   var init = function() {
     getPets();
   }; // end init
 
   $scope.deletePet = function(petId) {
-    console.log('in deletePet. ID -->', petId);
+    if (logs) console.log('in deletePet. ID -->', petId);
     //construct urlString
     var urlString = '/pets/' + petId;
     //send request to server to delete pet
@@ -73,19 +72,19 @@ app.controller("ViewPetsController", ["$scope", '$http', function($scope, $http)
       method: 'DELETE',
       url: urlString,
     }).then(function(response) {
-      console.log('delete $http success. Response -->',response);
+      if (logs) console.log('delete $http success. Response -->',response);
       getPets();
     }); // end $http
   }; // end deletePet
 
   var getPets = function() {
-    console.log('in getPets');
+    if (logs) console.log('in getPets');
     //get all pets from the server
     $http({
       method: 'GET',
       url: '/pets'
     }).then(function(response) {
-      console.log(response.data);
+      if (logs) console.log(response.data);
       $scope.allPets = response.data;
     }); // end $http
   }; // end getPets

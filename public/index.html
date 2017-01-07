@@ -19,17 +19,28 @@
 <body ng-app="petsApp">
 
   <div class="container">
-    <h1 class="text-center">Pet Directory</h1>
-    <ul>
-      <li><a href="#!/home">Home</a></li>
-      <li><a href="#!/addPet">Add Pet</a></li>
-      <li><a href="#!/viewPets">View Pets</a></li>
-    </ul>
-    <hr>
+
+    <h1 class="text-center">Tau Pet Directory</h1>
+    <nav class="navbar navbar-default">
+      <ul class="nav navbar-nav">
+        <li><a href="#!/home">Home</a></li>
+        <li><a href="#!/addPet">Add Pet</a></li>
+        <li><a href="#!/viewPets">View Pets</a></li>
+      </ul>
+    </nav>
 
     <main ng-view></main>
 
   </div>
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-list">
+        <li><a href="#!/home">Home</a></li>
+        <li><a href="#!/addPet">Add Pet</a></li>
+        <li><a href="#!/viewPets">View Pets</a></li>
+      </ul>
+    </div>
+  </footer>
 
 </body>
 </html>
