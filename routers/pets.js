@@ -29,4 +29,16 @@ router.post('/', function(req, res) {
   }); // end save
 }); // end post
 
+router.delete('/:id', function(req,res) {
+  console.log('delete route hit', req.params.id);
+  User.remove({_id: req.params.id}, function(err) {
+    if(err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      res.sendStatus(204);
+    } // end else
+  }); // end remove
+}); // end delete
+
 module.exports = router;

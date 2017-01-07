@@ -17,8 +17,23 @@ app.controller('PetsController', ['$scope', '$http', function($scope, $http) {
     $scope.urlIn = '';
   }; // end clearForm
 
+  $scope.deletePet = function(petId) {
+    console.log('in deletePet. ID -->', petId);
+    //construct urlString
+    var urlString = '/pets/' + petId;
+    //send request to server to delete pet
+    $http({
+      method: 'DELETE',
+      url: urlString,
+    }).then(function(response) {
+      console.log('delete $http success. Response -->',response);
+      getPets();
+    }); // end $http
+  }; // end deletePet
+
   var getPets = function() {
     console.log('in getPets');
+    //get all pets from the server
     $http({
       method: 'GET',
       url: '/pets'
@@ -37,13 +52,12 @@ app.controller('PetsController', ['$scope', '$http', function($scope, $http) {
       age: Number($scope.ageIn),
       image_url: $scope.urlIn
     }; // end objectToSend
-    console.log(objectToSend);
+    //send the object to the server
     $http({
       method: 'POST',
       url: '/pets',
       data: objectToSend
     }).then(function(response) {
-      console.log(response);
       clearForm();
       getPets();
     }); // end $http
