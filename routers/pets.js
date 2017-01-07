@@ -8,8 +8,8 @@ router.get('/', function(req, res) {
   User.find({}, function(err, result) {
     if (err) {
       console.log(err);
+      res.sendStatus(500);
     } else {
-      console.log(result);
       res.send(result);
     } // end else
   }); // end find
@@ -23,7 +23,6 @@ router.post('/', function(req, res) {
       console.log(err);
       res.sendStatus(500);
     } else {
-      console.log(newPet);
       res.sendStatus(201);
     } // end else
   }); // end save

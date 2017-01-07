@@ -21,3 +21,5 @@ app.listen(PORT, function() {
 //routers
 var pets = require( '../routers/pets' );
 app.use('/pets', pets);
+
+module.exports = app;
