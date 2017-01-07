@@ -4,12 +4,19 @@ var User = require( '../models/user' );
 
 router.get('/', function(req, res) {
   console.log('get route hit');
-  res.sendStatus(200);
+  //find all pets
+  User.find({}, function(err, result) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(result);
+      res.send(result);
+    } // end else
+  }); // end find
 }); // end get
 
 router.post('/', function(req, res) {
   console.log('post route hit', req.body);
-  res.send(req.body);
   var newPet = new User (req.body);
   newPet.save(function(err) {
     if (err) {
