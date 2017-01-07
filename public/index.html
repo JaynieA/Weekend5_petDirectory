@@ -14,7 +14,16 @@
   <link rel="stylesheet" href="/stylesheets/css/master.css">
 </head>
 <body ng-app="petsApp">
-  <main ng-controller="PetsController" class="container">
+
+  <h1 class="text-center">Pet Directory</h1>
+  <ul>
+    <li><a href="#!/home">Home</a></li>
+    <li><a href="#!/addPet">Add Pet</a></li>
+    <li><a href="#!/viewPets">View Pets</a></li>
+  </ul>
+  <main ng-view></main>
+  
+  <!-- <main ng-controller="PetsController" class="container">
     <h1 class="text-center">Pet Directory</h1>
     <h3 class="text-center">Use the form provided to add a pet to the directory.</h3>
     <hr>
@@ -54,6 +63,6 @@
     </div>
 
 
-  </main>
+  </main> -->
 </body>
 </html>
