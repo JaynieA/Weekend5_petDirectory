@@ -5,26 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pet Directory</title>
+  <!-- Scripts -->
   <script src="/vendors/angular.min.js" charset="utf-8"></script>
   <script src="/vendors/angular-route.min.js" charset="utf-8"></script>
   <script src="/scripts/client.js" charset="utf-8"></script>
-  <!--Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Styles -->
   <link rel="stylesheet" href="/vendors/bootstrap.min.css">
   <link rel="stylesheet" href="/stylesheets/css/master.css">
 </head>
+
 <body ng-app="petsApp">
+
   <div class="container">
     <h1 class="text-center">Pet Directory</h1>
-
-
     <ul>
       <li><a href="#!/home">Home</a></li>
       <li><a href="#!/addPet">Add Pet</a></li>
       <li><a href="#!/viewPets">View Pets</a></li>
     </ul>
     <hr>
+
     <main ng-view></main>
+
   </div>
 
 </body>

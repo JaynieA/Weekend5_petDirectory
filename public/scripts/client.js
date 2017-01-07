@@ -1,8 +1,6 @@
-console.log('js');
-
 var app = angular.module("petsApp", ["ngRoute"]);
 
-
+//Inject route providers
 app.config(["$routeProvider", function($routeProvider) {
   $routeProvider
     .when('/home', {
@@ -22,11 +20,10 @@ app.config(["$routeProvider", function($routeProvider) {
     }); // end $routeProvider
 }]); // end config
 
-
-
+//Controllers
 app.controller("HomeController", ["$scope", '$http', function($scope, $http) {
   console.log('home');
-}]); // end controller
+}]); // end HomeController
 
 app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
   console.log('add pet');
@@ -38,18 +35,6 @@ app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
     $scope.speciesIn = '';
     $scope.urlIn = '';
   }; // end clearForm
-
-  var getPets = function() {
-    console.log('in getPets');
-    //get all pets from the server
-    $http({
-      method: 'GET',
-      url: '/pets'
-    }).then(function(response) {
-      console.log(response.data);
-      $scope.allPets = response.data;
-    }); // end $http
-  }; // end getPets
 
   $scope.postPet = function() {
     console.log('in postPet');
@@ -67,12 +52,10 @@ app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
       data: objectToSend
     }).then(function(response) {
       clearForm();
-      getPets();
     }); // end $http
   }; // end postPet
 
-
-}]); // end controller
+}]); // end AddPetController
 
 app.controller("ViewPetsController", ["$scope", '$http', function($scope, $http) {
   console.log('view pets');
@@ -110,4 +93,4 @@ app.controller("ViewPetsController", ["$scope", '$http', function($scope, $http)
   //initialize the app
   init();
 
-}]); // end controller
+}]); // end ViewPetsController
