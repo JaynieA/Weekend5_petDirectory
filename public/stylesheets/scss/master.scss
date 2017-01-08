@@ -146,7 +146,6 @@ body {
   margin-top: 60px;
   padding: 70px 10px;
 }
-//bucket animations
 .bucket {
   margin: 50px auto;
   width: 250px;
@@ -156,22 +155,17 @@ body {
   margin-top: 60px;
   padding: 70px 10px;
 }
+//bucket animations
 .bucket:hover {
   -webkit-transform: rotate(360deg);
   background: $secondaryAccentColor;
   border-radius: 50%;
 }
 .rotate {
-  -webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
+  @include rotate-transition(0.5s);
 }
 .rotate:hover {
-  -webkit-transition: all 1s ease-in-out;
-	-moz-transition: all 1s ease-in-out;
-	-o-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+  @include rotate-transition(1s);
 }
 
 /* Add Pet */
