@@ -2,17 +2,28 @@ var express = require( 'express' );
 var router = express.Router();
 var User = require( '../models/user' );
 
-router.get('/', function(req, res) {
-  console.log('get route hit');
-  //find all pets
-  User.find({}, function(err, result) {
-    if (err) {
-      console.log(err);
-      res.sendStatus(500);
-    } else {
-      res.send(result);
-    } // end else
-  }); // end find
+router.get('/:q?', function(req, res) {
+  console.log('get route hit. search -->', req.params.q);
+  if (req.params.q) {
+    User.find({'name': new RegExp(req.params.q, 'i')}, function(err, result) {
+      if (err) {
+        console.log(err);
+        res.sendStatus(500);
+      } else {
+        res.send(result);
+      } // end else
+    }); // end find
+  } else {
+    //find all pets
+    User.find({}, function(err, result) {
+      if (err) {
+        console.log(err);
+        res.sendStatus(500);
+      } else {
+        res.send(result);
+      } // end else
+    }); // end find
+  } // end else
 }); // end get
 
 router.post('/', function(req, res) {

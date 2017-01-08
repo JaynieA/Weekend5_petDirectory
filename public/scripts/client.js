@@ -62,8 +62,12 @@ app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
 app.controller("ViewPetsController", ["$scope", '$http', function($scope, $http) {
 
   var init = function() {
-    getPets();
+    $scope.getPets();
   }; // end init
+
+  var clearForm = function() {
+    $scope.searchIn = '';
+  }; // end clearForm
 
   $scope.deletePet = function(petId) {
     if (logs) console.log('in deletePet. ID -->', petId);
@@ -79,15 +83,23 @@ app.controller("ViewPetsController", ["$scope", '$http', function($scope, $http)
     }); // end $http
   }; // end deletePet
 
-  var getPets = function() {
+  $scope.getPets = function() {
     if (logs) console.log('in getPets');
-    //get all pets from the server
+    //assemble url string
+    var urlString;
+    if ($scope.searchIn) {
+      urlString = '/pets/' + $scope.searchIn;
+    } else {
+      urlString = '/pets';
+    } // end else
+    if (logs) console.log(urlString);
+    //get pets from the server
     $http({
       method: 'GET',
-      url: '/pets'
+      url: urlString
     }).then(function(response) {
-      if (logs) console.log(response.data);
       $scope.allPets = response.data;
+      clearForm();
     }); // end $http
   }; // end getPets
 
