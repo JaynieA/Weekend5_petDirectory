@@ -35,7 +35,6 @@ app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
     $scope.ageIn = '';
     $scope.speciesIn = '';
     $scope.urlIn = '';
-    $scope.postSuccess = '';
   }; // end clearForm
 
   $scope.postPet = function() {
