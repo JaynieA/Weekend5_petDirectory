@@ -19,8 +19,7 @@ body {
   min-height: 85%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -60px;
-  /* the bottom margin is the negative value of the footer's height */ }
+  margin: 0 auto -60px; }
 
 /* Buttons */
 .btn {
@@ -29,6 +28,7 @@ body {
   background-color: transparent;
   border-radius: 0px;
   color: #ff8d00;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
   .btn:hover {
     color: #fff;
@@ -109,6 +109,7 @@ body {
   padding: 15px; }
   .home-div .glyphicon {
     color: #fff;
+    -webkit-transform: scale(3, 3);
     transform: scale(3, 3);
     margin-top: 40px;
     margin: 30px auto;
@@ -137,6 +138,7 @@ body {
 
 .bucket:hover {
   -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
   background: #ff8d00;
   border-radius: 50%; }
 
@@ -179,16 +181,18 @@ body {
   box-shadow: none !important;
   -webkit-box-shadow: none;
   border-bottom: 2px solid #03BC9D;
-  transition: 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   margin-top: 15px; }
   .form-control:focus {
     border-color: #ff8d00;
-    box-shadow: none;
+    box-shadow: none !important;
     -webkit-box-shadow: none; }
 
 .show-hide.ng-hide-add,
 .show-hide.ng-hide-remove {
-  transition: all linear 0.2s;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   display: block !important;
   position: absolute; }
 
@@ -250,8 +254,7 @@ body {
 
 /* Footer */
 .footer, .push {
-  height: 60px;
-  /* '.push' must be the same height as 'footer' */ }
+  height: 60px; }
 
 .footer {
   color: #fff;

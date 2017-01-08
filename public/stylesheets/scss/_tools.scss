@@ -1,0 +1,28 @@
+//MIXINS
+@mixin box-shadow($color) {
+  box-shadow: 0px 1px 5px 2px $color;
+  -webkit-box-shadow: 0px 1px 5px 2px $color;
+  -moz-box-shadow: 0px 1px 5px 2px $color;
+}
+@mixin rotate-transition($time) {
+  -webkit-transition: all $time ease-in-out;
+	-moz-transition: all $time ease-in-out;
+	-o-transition: all $time ease-in-out;
+	transition: all $time ease-in-out;
+}
+@mixin transition($time, $type) {
+  -webkit-transition: all $time $type;
+  transition: all $time $type;
+}
+@mixin scale-transform($scaleX, $scaleY) {
+  -webkit-transform: scale($scaleX, $scaleY);
+          transform: scale($scaleX, $scaleY);
+}
+@mixin rotate-transform($deg) {
+  -webkit-transform: rotate($deg);
+    transform: rotate($deg);
+}
+@mixin box-shadow-rm($amt) {
+  box-shadow: $amt !important;
+  -webkit-box-shadow: $amt;
+}

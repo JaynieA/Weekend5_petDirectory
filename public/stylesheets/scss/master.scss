@@ -1,4 +1,5 @@
 @import 'settings';
+@import 'tools';
 /* GLOBALS */
 html, body {
   font-family: $mainFont;
@@ -20,7 +21,7 @@ body {
   min-height: 85%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -60px; /* the bottom margin is the negative value of the footer's height */
+  margin: 0 auto -60px; // the bottom margin is the negative value of the footer's height
 }
 /* Buttons */
 .btn {
@@ -29,7 +30,7 @@ body {
   background-color: transparent;
   border-radius: 0px;
   color: $secondaryAccentColor;
-  transition: all 0.2s ease;
+  @include transition(0.2s, ease);
   &:hover {
     color: $white;
     background-color: $secondaryAccentColor;
@@ -126,7 +127,7 @@ body {
   padding: 15px;
   .glyphicon {
     color: $white;
-    transform: scale(3, 3);
+    @include scale-transform(3,3);
     margin-top: 40px;
     margin: 30px auto;
     text-shadow: 0.5px 0px $secondaryAccentLight;
@@ -155,9 +156,9 @@ body {
   margin-top: 60px;
   padding: 70px 10px;
 }
-//bucket animations
+// Bucket animations
 .bucket:hover {
-  -webkit-transform: rotate(360deg);
+  @include rotate-transform(360deg);
   background: $secondaryAccentColor;
   border-radius: 50%;
 }
@@ -194,20 +195,18 @@ body {
   border: 0;
   border-radius: 0;
   padding: 0.5em 0!important;
-  box-shadow: none !important;
-  -webkit-box-shadow: none;
+  @include box-shadow-rm(none);
   border-bottom: 2px solid $accentColor;
-  transition: 0.2s ease;
+  @include transition(0.2s, ease);
   margin-top: 15px;
   &:focus {
     border-color: $secondaryAccentColor;
-    box-shadow: none;
-    -webkit-box-shadow: none;
+    @include box-shadow-rm(none);
   }
 }
 .show-hide.ng-hide-add,
 .show-hide.ng-hide-remove {
-    transition: all linear 0.2s;
+    @include transition(0.2s, linear);
     display: block!important;
     position: absolute;
 }
@@ -234,7 +233,6 @@ body {
   width: 120px;
   margin-left: 190px;
 }
-
 
 /* Show Pets */
 .search-form {
@@ -278,7 +276,7 @@ body {
 }
 /* Footer */
 .footer, .push {
-    height: 60px; /* '.push' must be the same height as 'footer' */
+    height: 60px; // '.push' must be the same height as 'footer'
 }
 .footer {
   color: $white;
