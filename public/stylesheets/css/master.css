@@ -166,6 +166,11 @@ body {
   display: block !important;
   position: absolute; }
 
+.alert-success {
+  margin-top: 10px;
+  width: 120px;
+  margin-left: 190px; }
+
 /* Show Pets */
 .search-form {
   margin-top: -15px; }

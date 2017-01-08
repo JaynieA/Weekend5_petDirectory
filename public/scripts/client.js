@@ -1,5 +1,5 @@
 var logs = false;
-var app = angular.module("petsApp", ['ngRoute', 'ui.bootstrap']);
+var app = angular.module("petsApp", ['ngRoute', 'ui.bootstrap', 'ngAnimate']);
 
 //Inject route providers
 app.config(["$routeProvider", function($routeProvider) {
@@ -27,6 +27,7 @@ app.controller("HomeController", ["$scope", '$http', function($scope, $http) {
 }]); // end HomeController
 
 app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
+  $scope.postSuccess - false;
 
   var clearForm = function() {
     //reset input values to blank
@@ -34,6 +35,7 @@ app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
     $scope.ageIn = '';
     $scope.speciesIn = '';
     $scope.urlIn = '';
+    $scope.postSuccess = '';
   }; // end clearForm
 
   $scope.postPet = function() {
@@ -51,6 +53,8 @@ app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
       url: '/pets',
       data: objectToSend
     }).then(function(response) {
+      $scope.postSuccess = true;
+      console.log($scope.postSuccess);
       clearForm();
     }); // end $http
   }; // end postPet

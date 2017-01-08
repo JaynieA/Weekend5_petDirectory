@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <div ng-controller="AddPetController" class="addPetDiv content">
   <h3 class="text-center">Add Your Pet(s):</h3>
-  <form  ng-submit="postPet()" name="addPetForm" class="add-form">
+  <form  ng-submit="postPet()" name="addPetForm" class="add-form" ng-click="postSuccess=false">
 
     <div class="form-group">
       <label ng-show="nameIn" class="show-hide">Name:</label>
@@ -21,4 +21,9 @@
     </div>
     <button type="submit" class="btn btn-lg">Add Pet</button>
   </form>
+
+  <div ng-if="postSuccess" class="alert alert-success">
+    <p>Success <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></p>
+  </div>
+
 </div>
