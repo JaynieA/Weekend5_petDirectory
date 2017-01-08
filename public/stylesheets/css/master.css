@@ -115,6 +115,9 @@ body {
   padding: 70px 10px; }
 
 /* Add Pet */
+.addPetDiv {
+  padding: 15px; }
+
 .add-form {
   width: 65%;
   margin: 0 auto; }
