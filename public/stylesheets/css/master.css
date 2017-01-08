@@ -1,11 +1,48 @@
 html, body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  height: 100%; }
 
 body {
   overflow-x: hidden; }
 
-.content {
-  min-height: 62vh; }
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.wrapper {
+  min-height: 85%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+  /* the bottom margin is the negative value of the footer's height */ }
+
+.btn {
+  margin-top: 20px;
+  border: 2px solid #ff8d00;
+  background-color: transparent;
+  border-radius: 0px;
+  color: #ff8d00;
+  transition: 0.2s ease; }
+  .btn:hover {
+    color: #fff;
+    background-color: #ff8d00; }
+
+.btn-delete {
+  margin-top: 0px;
+  border-color: #d9534f;
+  color: #d9534f; }
+  .btn-delete:hover {
+    background-color: #d9534f; }
+
+.btn-lg {
+  padding: 8px 14px; }
+
+.hdr-btn {
+  margin: -60px 20px 20px 0; }
 
 .navbar {
   background-color: #293036;
@@ -62,27 +99,59 @@ body {
   margin-top: 60px;
   padding: 70px 10px; }
 
+.add-form {
+  width: 65%;
+  margin: 0 auto; }
+
+.form-control {
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border-bottom: 2px solid #03BC9D;
+  transition: 0.2s ease; }
+  .form-control:focus {
+    border-color: #ff8d00;
+    box-shadow: none;
+    -webkit-box-shadow: none; }
+
 .petsOutDiv .col-sm-3:nth-child(4n+1) {
   clear: left; }
+.petsOutDiv .col-sm-3:nth-last-child(-n+4) {
+  padding-bottom: 40px; }
 .petsOutDiv .pets-col {
   margin: 10px auto; }
-.petsOutDiv .pet p:not(:last-of-type) {
-  margin: 0 0 5px; }
+.petsOutDiv .pet {
+  box-shadow: 0px 1px 5px 2px #cccccc;
+  -webkit-box-shadow: 0px 1px 5px 2px #cccccc;
+  -moz-box-shadow: 0px 1px 5px 2px #cccccc;
+  padding: 10px 10px 15px; }
+  .petsOutDiv .pet p:not(:last-of-type) {
+    margin: 0 0 5px; }
+  .petsOutDiv .pet .pet-img {
+    margin-bottom: 8px; }
+
+.heavy {
+  font-weight: bold;
+  color: #03BC9D; }
+
+.footer, .push {
+  height: 60px;
+  /* '.push' must be the same height as 'footer' */ }
 
 .footer {
   color: #fff;
   background-color: #293036;
   position: relative;
   bottom: 0;
-  width: 100%;
-  margin-top: 40px; }
+  width: 100%; }
   .footer a {
     color: #cdcdcd; }
 
 .footer-list {
   list-style: none;
   padding-left: 0;
-  padding: 10px 0 0 0;
+  padding: 20px 0 0 0;
   text-align: center; }
   .footer-list li {
     color: #cdcdcd;

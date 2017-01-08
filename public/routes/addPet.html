@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <div ng-controller="AddPetController" class="addPetDiv content">
-  <h4 class="text-center">Add Your Pet(s):</h4>
-  <form  ng-submit="postPet()" name="addPetForm">
+  <h3 class="text-center">Add Your Pet(s):</h3>
+  <form  ng-submit="postPet()" name="addPetForm" class="add-form">
     <div class="form-group">
       <label>Name:</label>
-      <input ng-model="nameIn" type="text" placeholder="name" class="form-control" required>
+      <input ng-model="nameIn" type="text" placeholder="Name" class="form-control" required>
     </div>
     <div class="form-group">
       <label>Species:</label>
-      <input ng-model="speciesIn" type="text" placeholder="species" class="form-control" required>
+      <input ng-model="speciesIn" type="text" placeholder="Species" class="form-control" required>
     </div>
     <div class="form-group">
       <label>Age:</label>
-      <input ng-model="ageIn" type="number" placeholder="age" class="form-control" required>
+      <input ng-model="ageIn" type="number" placeholder="Age" class="form-control" required>
     </div>
     <div class="form-group">
       <label>Image URL:</label>
-      <input ng-model="urlIn" type="text" placeholder="image URL" class="form-control" required>
+      <input ng-model="urlIn" type="text" placeholder="Image URL" class="form-control" required>
     </div>
-    <button type="submit" class="btn btn-success">Add Pet</button>
+    <button type="submit" class="btn btn-lg">Add Pet</button>
   </form>
 </div>
