@@ -1,3 +1,4 @@
+/* GLOBALS */
 html, body {
   font-family: "Open Sans", sans-serif;
   height: 100%; }
@@ -5,6 +6,7 @@ html, body {
 body {
   overflow-x: hidden; }
 
+/* LAYOUT */
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -20,13 +22,14 @@ body {
   margin: 0 auto -60px;
   /* the bottom margin is the negative value of the footer's height */ }
 
+/* Buttons */
 .btn {
   margin-top: 20px;
   border: 2px solid #ff8d00;
   background-color: transparent;
   border-radius: 0px;
   color: #ff8d00;
-  transition: 0.2s ease; }
+  transition: all 0.2s ease; }
   .btn:hover {
     color: #fff;
     background-color: #ff8d00; }
@@ -49,6 +52,7 @@ body {
 .hdr-btn {
   margin: -60px 20px 20px 0; }
 
+/* Navbar */
 .navbar {
   background-color: #293036;
   border-radius: 0px; }
@@ -57,6 +61,11 @@ body {
     .navbar a:hover, .navbar a:active, .navbar a:focus {
       color: #293036; }
 
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background-color: #ffbe01; }
+
+/* Header */
 .hdr-logo {
   height: 125px;
   margin: 15px auto; }
@@ -85,6 +94,7 @@ body {
       left: 100%;
       margin-left: 15px; }
 
+/* Home */
 .home-div {
   padding: 15px; }
   .home-div .glyphicon {
@@ -92,10 +102,10 @@ body {
     transform: scale(3, 3);
     margin-top: 40px;
     margin: 30px auto;
-    text-shadow: 0.5px 0px #cdcdcd; }
+    text-shadow: 0.5px 0px #ffbe01; }
   .home-div h4 {
     color: #fff;
-    text-shadow: 0.5px 0.5px #cdcdcd;
+    text-shadow: 0.5px 0.5px #ffbe01;
     margin-top: 20px; }
 
 .bucket {
@@ -104,22 +114,56 @@ body {
   margin-top: 60px;
   padding: 70px 10px; }
 
+/* Add Pet */
 .add-form {
   width: 65%;
   margin: 0 auto; }
 
+.form-group {
+  position: relative;
+  margin-bottom: 1em;
+  padding-bottom: 1em; }
+  .form-group > label {
+    position: absolute;
+    top: -14px;
+    color: #03BC9D;
+    font-size: 1em; }
+
 .form-control {
-  border: none;
-  border-radius: 0px;
-  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0.5em 0 !important;
+  box-shadow: none !important;
   -webkit-box-shadow: none;
   border-bottom: 2px solid #03BC9D;
-  transition: 0.2s ease; }
+  transition: 0.2s ease;
+  margin-top: 15px; }
   .form-control:focus {
     border-color: #ff8d00;
     box-shadow: none;
     -webkit-box-shadow: none; }
 
+.show-hide.ng-hide-add,
+.show-hide.ng-hide-remove {
+  transition: all linear 0.2s;
+  display: block !important;
+  position: absolute; }
+
+.show-hide.ng-hide-add.ng-hide-add-active,
+.show-hide.ng-hide-remove {
+  top: -8px;
+  display: block !important;
+  position: absolute;
+  opacity: 0; }
+
+.show-hide.ng-hide-add,
+.show-hide.ng-hide-remove.ng-hide-remove-active {
+  top: -14px;
+  opacity: 1;
+  display: block !important;
+  position: absolute; }
+
+/* Show Pets */
 .petsOutDiv .col-sm-3:nth-child(4n+1) {
   clear: left; }
 .petsOutDiv .col-sm-3:nth-last-child(-n+4) {
@@ -140,6 +184,7 @@ body {
   font-weight: bold;
   color: #03BC9D; }
 
+/* Footer */
 .footer, .push {
   height: 60px;
   /* '.push' must be the same height as 'footer' */ }
