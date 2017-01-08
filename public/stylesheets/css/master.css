@@ -117,12 +117,40 @@ body {
     color: #fff;
     text-shadow: 0.5px 0.5px #ffbe01;
     margin-top: 20px; }
+    .home-div h4.sub-heading {
+      padding-top: 12px; }
 
 .bucket {
   background-color: #03BC9D;
   border: 1px solid #cdcdcd;
   margin-top: 60px;
   padding: 70px 10px; }
+
+.bucket {
+  margin: 50px auto;
+  width: 250px;
+  height: 250px;
+  background-color: #03BC9D;
+  border: 1px solid #cdcdcd;
+  margin-top: 60px;
+  padding: 70px 10px; }
+
+.bucket:hover {
+  -webkit-transform: rotate(360deg);
+  background: #ff8d00;
+  border-radius: 50%; }
+
+.rotate {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+.rotate:hover {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
 
 /* Add Pet */
 .addPetDiv {
@@ -189,7 +217,7 @@ body {
 
 /* Show Pets */
 .search-form {
-  margin-top: -15px; }
+  margin: -15px 10px 0 0; }
 
 .far-pull {
   display: inline-block;

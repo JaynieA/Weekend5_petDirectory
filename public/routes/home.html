@@ -3,21 +3,24 @@
   <h3 class="text-center">Let's Get Started.</h3>
   <div class="row text-center">
     <div class="col-xs-12 col-sm-4">
-      <div class="bucket">
-        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
-        <h4>1. Upload</h4>
+      <div ng-mouseover="hovering=true" ng-mouseleave="hovering=false"  class="bucket rotate">
+        <span ng-hide="hovering" class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+        <h4 ng-hide="hovering">1. Upload</h4>
+        <h4 ng-show="hovering" class="sub-heading">Upload an image to a photo hosting site.</h4>
       </div>
     </div>
     <div class="col-xs-12 col-sm-4">
-      <div class="bucket">
-        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-        <h4>2. Add</h4>
+      <div ng-mouseover="hovering=true" ng-mouseleave="hovering=false" class="bucket rotate">
+        <span ng-hide="hovering" class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+        <h4 ng-hide="hovering">2. Add</h4>
+        <h4 ng-show='hovering' class="sub-heading">Click on the 'Add Pet' tab to add a pet.</h4>
       </div>
     </div>
     <div class="col-xs-12 col-sm-4">
-      <div class="bucket">
-        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
-        <h4>3. Enjoy</h4>
+      <div ng-mouseover="hovering=true" ng-mouseleave="hovering=false" class="bucket rotate">
+        <span ng-hide="hovering" class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+        <h4 ng-hide="hovering">3. Enjoy</h4>
+        <h4 ng-show="hovering" class="sub-heading">Enjoy the images under the 'View Pets' tab.</h4>
       </div>
     </div>
   </div>
