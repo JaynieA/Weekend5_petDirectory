@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <div class="clearfix">
+
+  <!-- <form class="form-inline search-form">
+    <div class="form-group">
+      <label ng-show="searchIn" class="show-hide">Search</label>
+      <input ng-model="searchIn" type="search" class="form-control" placeholder="Search">
+      <button type="submit" class="btn">Search</button>
+    </div>
+  </form> -->
+
   <button ng-click="toggle=!toggle" type="button" class="btn pull-right hdr-btn">
     <span ng-show="toggle">Undo Sort</span>
     <span ng-hide="toggle">Sort By Name</span>
   </button>
+
 </div>
 
 <div ng-controller="ViewPetsController" class="petsOutDiv content">

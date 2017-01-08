@@ -188,6 +188,10 @@ body {
 }
 
 /* Show Pets */
+.search-form {
+  // margin-left: 60%;
+  margin-top: -15px;
+}
 .petsOutDiv {
   .col-sm-3:nth-child(4n+1) {
     clear: left;

@@ -35,3 +35,18 @@ Each Pet will need to have the following information:
 * Node
 * SASS
 * HTML5
+
+##Demo
+
+<p align="center">
+  <img src="public/images/home.png?raw=true" alt="ERD"/>
+</p>
+
+<p align="center">
+  <img src="public/images/demo.gif?raw=true" alt="ERD"/>
+</p>
+
+###Stretch Goals:
+
+* [ ] Add search functionality
+* [ ] Add ability to edit dogs

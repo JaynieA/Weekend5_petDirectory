@@ -167,6 +167,9 @@ body {
   position: absolute; }
 
 /* Show Pets */
+.search-form {
+  margin-top: -15px; }
+
 .petsOutDiv .col-sm-3:nth-child(4n+1) {
   clear: left; }
 .petsOutDiv .col-sm-3:nth-last-child(-n+4) {
