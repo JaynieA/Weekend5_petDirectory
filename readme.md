@@ -19,7 +19,7 @@ Each Pet will need to have the following information:
 * [x] Add a button in the Pets List to delete a pet from the database.
 
 ##Jedi Master Mode
-* [ ] Use Angular Routes to have a view for each function:
+* [x] Use Angular Routes to have a view for each function:
 
 * Home view (description/landing)
 * Add
