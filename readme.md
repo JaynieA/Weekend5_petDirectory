@@ -26,7 +26,7 @@ Each Pet will need to have the following information:
 * All Pets
 
 ##Jedi Council Member Mode
-* [ ] Look into Filtering. In the Pets view, include a button to turn on Alphabetical Sorting of the pets that can be toggled on and off.
+* [x] Look into Filtering. In the Pets view, include a button to turn on Alphabetical Sorting of the pets that can be toggled on and off.
 
 ###Technologies:
 * Mongo

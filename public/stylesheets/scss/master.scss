@@ -34,6 +34,13 @@ body {
     color: $white;
     background-color: $secondaryAccentColor;
   }
+  &:focus {
+    outline: none;
+    color: $secondaryAccentColor;
+  }
+  &:hover:focus {
+    color: $white;
+  }
 }
 .btn-delete {
   margin-top: 0px;

@@ -30,6 +30,11 @@ body {
   .btn:hover {
     color: #fff;
     background-color: #ff8d00; }
+  .btn:focus {
+    outline: none;
+    color: #ff8d00; }
+  .btn:hover:focus {
+    color: #fff; }
 
 .btn-delete {
   margin-top: 0px;
