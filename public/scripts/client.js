@@ -1,5 +1,5 @@
 var logs = false;
-var app = angular.module("petsApp", ["ngRoute"]);
+var app = angular.module("petsApp", ['ngRoute', 'ui.bootstrap']);
 
 //Inject route providers
 app.config(["$routeProvider", function($routeProvider) {

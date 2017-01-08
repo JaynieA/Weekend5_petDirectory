@@ -1,5 +1,66 @@
 html, body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
+
+body {
+  overflow-x: hidden; }
+
+.content {
+  min-height: 62vh; }
+
+.navbar {
+  background-color: #293036;
+  border-radius: 0px; }
+  .navbar a {
+    color: #fff; }
+    .navbar a:hover, .navbar a:active, .navbar a:focus {
+      color: #293036; }
+
+.hdr-logo {
+  height: 125px;
+  margin: 15px auto; }
+
+.subtitle {
+  margin: 0 0 2em 0; }
+
+.lined {
+  line-height: 0.5;
+  text-align: center; }
+  .lined span {
+    display: inline-block;
+    position: relative; }
+    .lined span:before, .lined span:after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      border-bottom: 1px solid #cdcdcd;
+      top: 0;
+      width: 500px;
+      margin-top: 75px; }
+    .lined span:before {
+      right: 100%;
+      margin-right: 15px; }
+    .lined span:after {
+      left: 100%;
+      margin-left: 15px; }
+
+.home-div {
+  padding: 15px; }
+  .home-div .glyphicon {
+    color: #fff;
+    transform: scale(3, 3);
+    margin-top: 40px;
+    margin: 30px auto;
+    text-shadow: 0.5px 0px #cdcdcd; }
+  .home-div h4 {
+    color: #fff;
+    text-shadow: 0.5px 0.5px #cdcdcd;
+    margin-top: 20px; }
+
+.bucket {
+  background-color: #03BC9D;
+  border: 1px solid #cdcdcd;
+  margin-top: 60px;
+  padding: 70px 10px; }
 
 .petsOutDiv .col-sm-3:nth-child(4n+1) {
   clear: left; }
@@ -10,13 +71,13 @@ html, body {
 
 .footer {
   color: #fff;
-  background-color: #333;
+  background-color: #293036;
   position: relative;
   bottom: 0;
   width: 100%;
   margin-top: 40px; }
   .footer a {
-    color: #fff; }
+    color: #cdcdcd; }
 
 .footer-list {
   list-style: none;
@@ -24,10 +85,10 @@ html, body {
   padding: 10px 0 0 0;
   text-align: center; }
   .footer-list li {
-    color: #fff;
+    color: #cdcdcd;
     display: inline; }
     .footer-list li:not(:first-child):before {
       content: ' | ';
-      padding: 10px; }
+      padding: 20px; }
 
 /*# sourceMappingURL=master.css.map */

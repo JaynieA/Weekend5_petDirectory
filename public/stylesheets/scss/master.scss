@@ -3,9 +3,83 @@
 html, body {
   font-family: $mainFont;
 }
+body {
+  overflow-x: hidden;
+}
 //LAYOUT
+.content {
+  min-height: 62vh;
+}
 //Navbar
+.navbar {
+  background-color: $darkAccentColor;
+  border-radius: 0px;
+  a {
+    color: $white;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $darkAccentColor;
+    }
+  }
+}
+//Header
+.hdr-logo {
+  height: 125px;
+  margin: 15px auto;
+}
+.subtitle {
+  margin: 0 0 2em 0;
+}
+.lined {
+  line-height: 0.5;
+  text-align: center;
+  span {
+    display: inline-block;
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      border-bottom: 1px solid $mutedGrey;
+      top: 0;
+      width: 500px;
+      margin-top: 75px;
+    }
+    &:before {
+      right: 100%;
+      margin-right: 15px;
+    }
+    &:after {
+      left: 100%;
+      margin-left: 15px;
+    }
+  }
+}
+
 //Home
+.home-div {
+  padding: 15px;
+  .glyphicon {
+    color: $white;
+    transform: scale(3, 3);
+    margin-top: 40px;
+    margin: 30px auto;
+    text-shadow: 0.5px 0px $mutedGrey;
+  }
+  h4 {
+    color: $white;
+    text-shadow: 0.5px 0.5px $mutedGrey;
+    margin-top: 20px;
+  }
+}
+.bucket {
+  background-color: $accentColor;
+  border: 1px solid $mutedGrey;
+  margin-top: 60px;
+  padding: 70px 10px;
+}
 //Add Pet
 
 //Show Pets
@@ -27,13 +101,13 @@ html, body {
 //Footer
 .footer {
   color: $white;
-  background-color: $footerBackground;
+  background-color: $darkAccentColor;;
   position: relative;
   bottom: 0;
   width: 100%;
   margin-top: 40px;
   a {
-    color: $white;
+    color: $mutedGrey;
   }
 }
 .footer-list {
@@ -42,11 +116,11 @@ html, body {
   padding: 10px 0 0 0;
   text-align: center;
   li {
-    color: $white;
+    color: $mutedGrey;
     display: inline;
     &:not(:first-child):before {
       content: ' | ';
-      padding: 10px;
+      padding: 20px;
     }
   }
 }
