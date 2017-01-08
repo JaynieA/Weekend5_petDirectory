@@ -48,5 +48,5 @@ Each Pet will need to have the following information:
 
 ###Stretch Goals:
 
-* [ ] Add search functionality
-* [ ] Add ability to edit dogs
+* [x] Add search functionality
+* [x] Add ability to edit dogs

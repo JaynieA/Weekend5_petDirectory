@@ -43,12 +43,15 @@ body {
   }
 }
 .btn-delete {
-  margin-top: 0px;
+  margin: 0 2px;
   border-color: $accentRed;
   color: $accentRed;
   &:hover {
     background-color: $accentRed;
   }
+}
+.btn-edit {
+  margin: 0 2px;
 }
 .btn-lg {
   padding: 8px 14px;
@@ -204,7 +207,6 @@ body {
 .alert-success {
   margin-top: 10px;
   width: 120px;
-  //TODO: make this work on other viewport sizes
   margin-left: 190px;
 }
 
@@ -245,6 +247,9 @@ body {
 .heavy {
   font-weight: bold;
   color: $accentColor;
+}
+.edit-form {
+  margin-bottom: 10px;
 }
 /* Footer */
 .footer, .push {

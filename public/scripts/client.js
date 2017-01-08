@@ -79,7 +79,7 @@ app.controller("ViewPetsController", ["$scope", '$http', function($scope, $http)
       url: urlString,
     }).then(function(response) {
       if (logs) console.log('delete $http success. Response -->',response);
-      getPets();
+      $scope.getPets();
     }); // end $http
   }; // end deletePet
 
@@ -102,6 +102,26 @@ app.controller("ViewPetsController", ["$scope", '$http', function($scope, $http)
       clearForm();
     }); // end $http
   }; // end getPets
+
+  $scope.postEdit = function(petId, newName, newAnimal, newAge) {
+    if (logs) console.log(petId);
+    //assemble object to send
+    var objectToSend = {
+      name: newName,
+      animal: newAnimal,
+      age: Number(newAge)
+    }; // end objectToSend
+    if (logs) console.log(objectToSend);
+    //put the edit to the server
+    $http({
+      method: 'PUT',
+      url: '/pets/' + petId,
+      data: objectToSend
+    }).then(function(response) {
+      $scope.isEditing = false;
+      $scope.getPets();
+    }); // end $http
+  }; // end postEdit
 
   //initialize the app
   init();

@@ -22,12 +22,22 @@
     <div class="col-xs-6 col-sm-3 text-center pets-col" ng-repeat="pet in allPets | orderBy: !toggle?'-date':'name' ">
       <div class="pet">
         <img ng-src="{{ pet.image_url }}" alt="{{ pet.name }}" class="img-responsive pet-img">
+
         <p><span class="heavy">Name:</span> {{ pet.name }}</p>
         <p><span class="heavy">Age:</span> {{ pet.age }}</p>
         <p><span class="heavy">Species:</span> {{ pet.animal }}</p>
-        <button ng-click="deletePet( pet._id )" type="button" class="btn btn-sm btn-delete">
+
+        <form ng-show="isEditing" class="edit-form">
+          <input type="text" ng-model="pet.name" class="form-control">
+          <input type="text" ng-model="pet.age" class="form-control">
+          <input type="text" ng-model="pet.animal" class="form-control">
+        </form>
+
+        <button ng-click="deletePet( pet._id )" ng-hide="isEditing" type="button" class="btn btn-sm btn-delete">
           <span class="glyphicon glyphicon-trash" aria-extended="true"></span>
         </button>
+        <button ng-click="isEditing=true" ng-hide="isEditing" class="btn btn-sm btn-edit"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+        <button ng-show="isEditing" ng-click="postEdit( pet._id, pet.name, pet.animal, pet.age )" class="btn">Save</button>
       </div>
     </div>
   </div>

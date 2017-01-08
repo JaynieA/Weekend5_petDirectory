@@ -40,11 +40,14 @@ body {
     color: #fff; }
 
 .btn-delete {
-  margin-top: 0px;
+  margin: 0 2px;
   border-color: #d9534f;
   color: #d9534f; }
   .btn-delete:hover {
     background-color: #d9534f; }
+
+.btn-edit {
+  margin: 0 2px; }
 
 .btn-lg {
   padding: 8px 14px; }
@@ -213,6 +216,9 @@ body {
 .heavy {
   font-weight: bold;
   color: #03BC9D; }
+
+.edit-form {
+  margin-bottom: 10px; }
 
 /* Footer */
 .footer, .push {

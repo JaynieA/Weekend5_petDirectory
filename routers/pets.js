@@ -51,4 +51,21 @@ router.delete('/:id', function(req,res) {
   }); // end remove
 }); // end delete
 
+router.put('/:id', function(req, res) {
+  console.log('in put route', req.body, req.params.id);
+  //marshall variables
+  var newName = req.body.name;
+  var newAnimal = req.body.animal;
+  var newAge = req.body.age;
+  //update the edited pet
+  User.update({_id: req.params.id}, {$set: {name: newName, animal: newAnimal, age: newAge}}, function(err) {
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      res.sendStatus(200);
+    } // end else
+  }); // end update
+}); // end put
+
 module.exports = router;
