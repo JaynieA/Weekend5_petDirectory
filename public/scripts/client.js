@@ -27,7 +27,7 @@ app.controller("HomeController", ["$scope", '$http', function($scope, $http) {
 }]); // end HomeController
 
 app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
-  $scope.postSuccess - false;
+  $scope.postSuccess = false;
 
   var clearForm = function() {
     //reset input values to blank
@@ -53,7 +53,6 @@ app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
       data: objectToSend
     }).then(function(response) {
       $scope.postSuccess = true;
-      console.log($scope.postSuccess);
       clearForm();
     }); // end $http
   }; // end postPet

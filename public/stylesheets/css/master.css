@@ -50,7 +50,14 @@ body {
   padding: 8px 14px; }
 
 .hdr-btn {
-  margin: -60px 20px 20px 0; }
+  margin: -60px 200px 20px 0; }
+
+.btn-search {
+  border: none;
+  margin-left: -35px; }
+  .btn-search:hover {
+    background-color: transparent;
+    color: #03BC9D; }
 
 /* Navbar */
 .navbar {
@@ -131,6 +138,8 @@ body {
     top: -14px;
     color: #03BC9D;
     font-size: 1em; }
+  .form-group > .short-label {
+    top: 0; }
 
 .form-control {
   border: 0;
@@ -166,6 +175,10 @@ body {
   display: block !important;
   position: absolute; }
 
+.short-label.ng-hide-add,
+.short-label.ng-hide-remove.ng-hide-remove-active {
+  top: 0; }
+
 .alert-success {
   margin-top: 10px;
   width: 120px;
@@ -174,6 +187,12 @@ body {
 /* Show Pets */
 .search-form {
   margin-top: -15px; }
+
+.far-pull {
+  display: inline-block;
+  float: right;
+  position: relative;
+  margin-top: -60px; }
 
 .petsOutDiv .col-sm-3:nth-child(4n+1) {
   clear: left; }
