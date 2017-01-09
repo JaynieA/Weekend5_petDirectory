@@ -27,7 +27,6 @@ app.controller("HomeController", ["$scope", '$http', function($scope, $http) {
 }]); // end HomeController
 
 app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
-  $scope.postSuccess = false;
 
   var clearForm = function() {
     //reset input values to blank
@@ -60,10 +59,6 @@ app.controller("AddPetController", ["$scope", '$http', function($scope, $http) {
 }]); // end AddPetController
 
 app.controller("ViewPetsController", ["$scope", '$http', function($scope, $http) {
-
-  var init = function() {
-    $scope.getPets();
-  }; // end init
 
   var clearForm = function() {
     $scope.searchIn = '';
@@ -122,8 +117,5 @@ app.controller("ViewPetsController", ["$scope", '$http', function($scope, $http)
       $scope.getPets();
     }); // end $http
   }; // end postEdit
-
-  //initialize the app
-  init();
 
 }]); // end ViewPetsController
