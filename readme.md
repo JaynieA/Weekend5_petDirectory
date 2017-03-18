@@ -15,20 +15,20 @@ Each Pet will need to have the following information:
 * Age (example, 14)
 * Image Url
 
-##Jedi Knight Mode
+## Jedi Knight Mode
 * [x] Add a button in the Pets List to delete a pet from the database.
 
-##Jedi Master Mode
+## Jedi Master Mode
 * [x] Use Angular Routes to have a view for each function:
 
 * Home view (description/landing)
 * Add
 * All Pets
 
-##Jedi Council Member Mode
+## Jedi Council Member Mode
 * [x] In the Pets view, include a button to turn on Alphabetical Sorting of the pets that can be toggled on and off.
 
-##Technologies:
+## Technologies:
 * Mongo
 * Express
 * Angular
@@ -36,28 +36,24 @@ Each Pet will need to have the following information:
 * SASS
 * HTML5
 
-##Stretch Goals:
+## Stretch Goals:
 
 * [x] Add search functionality
 * [x] Add ability to edit dogs
 * [x] Add animation to home page
 
-##Demos
+## Demos
 
 <p align="center">
   <img src="public/images/home.png?raw=true" alt="ERD"/>
 </p>
 
-###
 
 <p align="center">
   <img src="public/images/demo2.gif?raw=true" alt="ERD"/>
 </p>
 
-###
 
 <p align="center">
   <img src="public/images/demo.gif?raw=true" alt="ERD"/>
 </p>
-
-###
